@@ -14,4 +14,3 @@
 // }
 
 // useGLTF.preload('/computerModal.glb');
-// 
