@@ -150,9 +150,9 @@ function Hero() {
           variants={heroImg}
           initial="initial"
           animate="animate"
-          className="hImg "
+          className="hImg z-10"
         >
-          <img className=" z-10" src="/hero.png" alt="" />
+          <img className="" src="/hero.png" alt="" />
         </motion.div>
       </div>
     </div>
