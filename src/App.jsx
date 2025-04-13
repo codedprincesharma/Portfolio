@@ -1,7 +1,7 @@
 import Hero from "./componet/hero/Hero";
 import Services from "./componet/services/Services";
-import Portfolio from "./componet/portfolio/portfolio";
 import Contact from "./componet/contact/contact";
+import Skills from "./componet/skills/skills"
 
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
         <Services />
       </section>
       <section id="#portfolio">
-        <Portfolio />
+        <Skills/>
       </section>
       <section id="#contact">
         <Contact />
