@@ -1,5 +1,5 @@
 import Hero from "./componet/hero/Hero";
-import Services from "./componet/services/services";
+import Services from "./componet/services/Services";
 import Portfolio from "./componet/portfolio/portfolio";
 import Contact from "./componet/contact/contact";
 
