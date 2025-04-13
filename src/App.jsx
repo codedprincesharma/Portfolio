@@ -3,6 +3,7 @@ import Services from "./componet/services/Services";
 import Contact from "./componet/contact/contact";
 import Skills from "./componet/skills/skills";
 import Project from "./componet/Project/project";
+import Footer from "./componet/footer/footer";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <section id="#contact">
         <Contact />
       </section>
+      <Footer />
     </div>
   );
 };
