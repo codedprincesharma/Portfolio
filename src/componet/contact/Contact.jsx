@@ -1,21 +1,21 @@
 import React from "react";
-import { motion } from 'framer-motion';
-
+import { motion } from "framer-motion";
+import Footer from "./footer";
 function contact() {
   return (
-    <div className="w-full h-screen  from-[#0f2027] via-[#203a43] to-[#2c5364] flex items-center justify-center">
+    <div className="w-full h-screen flex-col p-10  from-[#0f2027] via-[#203a43] to-[#2c5364] flex items-center justify-center">
       <motion.div
         className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-3xl shadow-2xl w-full max-w-5xl h-[80vh] flex flex-col md:flex-row overflow-hidden"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
         {/* Left Side with New SVG */}
         <motion.div
           className="md:w-1/2 w-full flex items-center justify-center p-10"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 1, type: 'spring' }}
+          transition={{ duration: 1, type: "spring" }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ function contact() {
           className="md:w-1/2 w-full p-10 text-white"
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
           <form className="space-y-5">
@@ -72,6 +72,7 @@ function contact() {
           </form>
         </motion.div>
       </motion.div>
+      <Footer />
     </div>
   );
 }
