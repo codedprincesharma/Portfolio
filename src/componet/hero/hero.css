@@ -2,6 +2,8 @@
   height: 100%;
   overflow: hidden;
   display: flex;
+  position: relative;
+  flex-wrap: wrap;
 }
 
 .bg {
@@ -11,26 +13,23 @@
   top: 0;
   left: 0;
   z-index: -1;
-
 }
 
 .hImg {
   position: absolute;
-  top: 10;
+  top: 10px;
   bottom: 0;
   right: 0;
   left: 0;
   margin: auto;
   height: 80%;
   width: max-content;
-  margin-left: 515px;
 }
 
-.hImg img{
+.hImg img {
   width: 100%;
   height: 100%;
-  object-fit:cover;
-
+  object-fit: cover;
 }
 
 .hSection {
@@ -39,8 +38,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 40px;
 }
-
 
 .hSection.right {
   align-items: end;
@@ -49,7 +48,7 @@
 .hName {
   margin-top: 50px;
   font-size: 100px;
-  line-height:110%;
+  line-height: 110%;
   color: pink;
 }
 
@@ -126,4 +125,78 @@
   border-bottom-left-radius: 20px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+}
+
+/* ✅ Responsive CSS for Mobile */
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .hSection {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hName {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+
+  .award {
+    width: 90%;
+  }
+
+  .award h2 {
+    font-size: 20px;
+  }
+
+  .award p {
+    font-size: 14px;
+    letter-spacing: normal;
+  }
+
+  .follow {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+
+  .followTextContainer {
+    display: none;
+  }
+
+  .hImg {
+    position: relative;
+    margin-top: 20px;
+    height: auto;
+    width: 100%;
+  }
+
+  .hImg img {
+    width: 100%;
+    height: auto;
+  }
+
+  .bg {
+    position: relative;
+    height: 300px;
+  }
+
+  .bubbleConatiner {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bubble {
+    width: 90%;
+    font-size: 14px;
+  }
 }

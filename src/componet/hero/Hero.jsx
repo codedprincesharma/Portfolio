@@ -1,11 +1,8 @@
 import React, { Suspense } from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import "./hero.css";
-import { animate } from "motion";
 import Shape from "./shape";
 import { Canvas } from "@react-three/fiber";
-import { int } from "three/tsl";
-import { transition } from "three/examples/jsm/tsl/display/TransitionNode.js";
 
 const awardVariant = {
   initial: {
@@ -51,21 +48,6 @@ const heroImg = {
   },
 };
 
-// const can = {
-//   initial: {
-    
-//     opacity: 0,
-//   },
-//   animate: {
-    
-//     opacity: 1,
-//     transition: {
-//       duration: 3,
-//       sraggerChildren: 1,
-//     },
-//   },
-// };
-
 function Hero() {
   return (
     <div className="hero">
@@ -81,6 +63,7 @@ function Hero() {
           <br />
           <span>I&apos;m Prince!</span>
         </motion.h1>
+
         {/* About */}
         <motion.div
           variants={awardVariant}
@@ -98,12 +81,11 @@ function Hero() {
             experiences that are both functional and futuristic.
           </motion.p>
         </motion.div>
-        {/* Scroll SVG */}
         <a href="#service"></a>
       </div>
 
-      <div className="hSection right ">
-        {/* SocalMedia */}
+      <div className="hSection right">
+        {/* Social Media */}
         <motion.div
           variants={followVarient}
           initial="initial"
@@ -139,20 +121,21 @@ function Hero() {
           </motion.div>
         </motion.div>
       </div>
+
       <div className="bg">
-        <Canvas className="hero-canvas ">
+        <Canvas className="hero-canvas">
           <Suspense fallback={null}>
             <Shape />
           </Suspense>
         </Canvas>
-        {/* 3d */}
+
         <motion.div
           variants={heroImg}
           initial="initial"
           animate="animate"
-          className="hImg z-10"
+          className="hImg"
         >
-          <img className="" src="/hero.png" alt="" />
+          <img src="/hero.png" alt="hero" />
         </motion.div>
       </div>
     </div>

@@ -1,25 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Footer from "./footer";
-function contact() {
+
+function Contact() {
   return (
-    <div className="w-full h-screen flex-col p-10  from-[#0f2027] via-[#203a43] to-[#2c5364] flex items-center justify-center">
+    <div className="w-full min-h-screen flex flex-col items-center justify-center px-4 py-10 bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364]">
       <motion.div
-        className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-3xl shadow-2xl w-full max-w-5xl h-[80vh] flex flex-col md:flex-row overflow-hidden"
+        className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-3xl shadow-2xl w-full max-w-5xl flex flex-col md:flex-row overflow-hidden"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {/* Left Side with New SVG */}
+        {/* Left Side SVG */}
         <motion.div
-          className="md:w-1/2 w-full flex items-center justify-center p-10"
+          className="md:w-1/2 w-full flex items-center justify-center p-10 bg-white/5"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1, type: "spring" }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-40 h-40 text-white/90"
+            className="w-32 h-32 md:w-40 md:h-40 text-white/90"
             viewBox="0 0 24 24"
             fill="currentColor"
           >
@@ -30,12 +31,14 @@ function contact() {
 
         {/* Right Side Form */}
         <motion.div
-          className="md:w-1/2 w-full p-10 text-white"
+          className="md:w-1/2 w-full p-6 sm:p-10 text-white"
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center md:text-left">
+            Get in Touch
+          </h2>
           <form className="space-y-5">
             <div>
               <label className="block mb-1">Name</label>
@@ -65,16 +68,20 @@ function contact() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className="mt-2 bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-md hover:bg-white/30 transition border border-white/30"
+              className="mt-2 bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-md hover:bg-white/30 transition border border-white/30 w-full sm:w-auto"
             >
               Send Message
             </motion.button>
           </form>
         </motion.div>
       </motion.div>
-      <Footer />
+
+      {/* Footer */}
+      <div className="mt-10 w-full">
+        <Footer />
+      </div>
     </div>
   );
 }
 
-export default contact;
+export default Contact;

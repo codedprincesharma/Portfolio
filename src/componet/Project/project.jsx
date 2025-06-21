@@ -23,7 +23,6 @@ const childVariant = {
   },
 };
 
-// 🆕 8 projects added
 const projects = [
   "Project-1",
   "Project-2",
@@ -45,21 +44,21 @@ const Project = () => {
       variants={containerVariant}
       initial="initial"
       animate={isInView ? "animate" : "initial"}
-      className="flex flex-col justify-start items-center py-10"
+      className="flex flex-col justify-start items-center py-10 px-4 sm:px-6 md:px-10"
     >
       <motion.h1
         variants={childVariant}
-        className="mt-10 text-6xl font-extralight text-white"
+        className="mt-10 text-3xl sm:text-4xl md:text-5xl font-extralight text-white text-center"
       >
         My Projects
       </motion.h1>
 
-      <div className="flex w-full flex-wrap justify-center items-center gap-10 p-10">
+      <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 mt-10 w-full max-w-6xl">
         {projects.map((title, index) => (
           <motion.div
             key={index}
             variants={childVariant}
-            className="w-80 h-40 bg-amber-500 rounded-3xl text-3xl flex justify-center items-center capitalize shadow-lg"
+            className="w-full sm:w-[45%] lg:w-[30%] h-36 bg-amber-500 rounded-2xl text-xl sm:text-2xl flex justify-center items-center capitalize shadow-md hover:scale-[1.02] transition-all duration-300"
           >
             {title}
           </motion.div>
@@ -70,5 +69,3 @@ const Project = () => {
 };
 
 export default Project;
-
-
